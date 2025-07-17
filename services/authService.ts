@@ -13,7 +13,7 @@ class AuthService {
   constructor() {
     // Configure Google Sign-In
     GoogleSignin.configure({
-      webClientId: 'YOUR_WEB_CLIENT_ID', // Add your web client ID here
+      webClientId: process.env.EXPO_PUBLIC_WEB_CLIENT_ID!, // Add your web client ID here
     });
   }
 
@@ -21,13 +21,17 @@ class AuthService {
     try {
       // Check if your device supports Google Play
       await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
-      
-      // Get the users ID token
-      const { idToken } = await GoogleSignin.signIn();
-      
+
+      // Get the user's ID token
+      const signInResponse = await GoogleSignin.signIn();
+      const idToken = (signInResponse as any).idToken;
+
+      if (!idToken) {
+        throw new Error('Google Sign-In failed: No idToken returned.');
+      }
+
       // Create a Google credential with the token
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      
       // Sign-in the user with the credential
       const userCredential = await auth().signInWithCredential(googleCredential);
       
