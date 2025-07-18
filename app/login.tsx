@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert, ActivityIndicator } from 'react-native';
 import { useState } from 'react';
 import { router } from 'expo-router';
 import authService from '../services/authService';
@@ -54,7 +54,11 @@ export default function LoginScreen() {
           onPress={handleGoogleSignIn}
           disabled={loading}
         >
-          <Text style={styles.buttonText}>Continue with Google</Text>
+          {loading ? (
+            <ActivityIndicator color="#fff" size="small" />
+          ) : (
+            <Text style={styles.buttonText}>Continue with Google</Text>
+          )}
         </TouchableOpacity>
 
         {AppleAuthentication.isAvailableAsync() && (
