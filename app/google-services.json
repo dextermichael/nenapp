@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1047959834793",
+    "project_id": "nenapp-f21e6",
+    "storage_bucket": "nenapp-f21e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047959834793:android:a4bdea31f020ff3ba159b8",
+        "android_client_info": {
+          "package_name": "com.saber.nenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047959834793-2afqbo6rsm3cq5m2ta6h0vgg0aprqvrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saber.nenapp",
+            "certificate_hash": "8f14b43dc2f31de2d09f1b3c7a099ae7407649ff"
+          }
+        },
+        {
+          "client_id": "1047959834793-2v3si4s1mlqe32un3bl6v5e0nnj8iae0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6gLzmFi18B7Xem_V5wmkgnJ2wUOWibBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047959834793-2v3si4s1mlqe32un3bl6v5e0nnj8iae0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1047959834793-2rut8mnohfdgq78vse2hdbib38ciaj3v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.saber.nenapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
