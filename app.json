@@ -10,7 +10,21 @@
     "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.saber.nenapp"
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.saber.nenapp",
+      "plugins": [
+        "@react-native-firebase/app",
+        "@react-native-firebase/auth",
+        "@react-native-firebase/crashlytics",
+        [
+          "expo-build-properties",
+          {
+            "ios": {
+              "useFrameworks": "static"
+            }
+          }
+        ]
+      ]
     },
     "android": {
       "package": "com.saber.nenapp",

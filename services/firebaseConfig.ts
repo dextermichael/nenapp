@@ -1,4 +1,6 @@
+import { getApp } from '@react-native-firebase/app';
 import { Platform } from 'react-native';
+
 
 // Firebase web configuration
 const firebaseWebConfig = {
@@ -24,8 +26,7 @@ export const initializeFirebase = () => {
     return firebaseApp;
   } else {
     // Native platforms (iOS/Android) - use React Native Firebase
-    const { default: app } = require('@react-native-firebase/app');
-    return app();
+    return getApp();
   }
 };
 

@@ -1,7 +1,7 @@
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import { Platform } from 'react-native';
-import { initializeFirebase, getAuth } from './firebaseConfig';
+import { getAuth, initializeFirebase } from './firebaseConfig';
 
 export interface User {
   uid: string;
